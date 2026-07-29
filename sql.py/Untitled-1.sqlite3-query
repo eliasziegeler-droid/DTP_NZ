@@ -1,0 +1,7 @@
+-- database: ../app.py/database.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM Motorbikes;
+
+INSERT INTO Motorbikes(Model,Topspeed,Cost,Description) VALUES("MT-03",108,5300,"Yamaha is legendary for Japanese reliability and sharp, intuitive handling. The R1's defining feature is its crossplane crankshaft inline-four engine, which mimics the power delivery and distinct firing order of a MotoGP bike, providing linear torque and excellent traction coming out of corners.")
