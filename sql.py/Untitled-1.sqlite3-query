@@ -4,4 +4,56 @@
 
 SELECT * FROM Motorbikes;
 
+
+-- YAMAHA MODELS
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Yamaha YZF-R1M', 186, 27399.00, 'Flagship track-focused superbike powered by a 998cc crossplane inline-four engine with Öhlins Electronic Racing Suspension.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Yamaha MT-10', 160, 14499.00, 'Hyper-naked sport motorcycle featuring aggressive styling and a high-torque 998cc CP4 crossplane engine.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Yamaha Tenere 700', 130, 10799.00, 'Versatile mid-weight adventure motorcycle built with a rally-bred chassis and reliable 689cc CP2 parallel-twin engine.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Yamaha YZF-R6', 160, 12199.00, 'High-revving 599cc supersport legend designed for precision cornering and track dominance.');
+
+-- BMW MODELS
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('BMW M 1000 RR', 189, 35395.00, 'Race-homologated superbike equipped with carbon winglets, titanium valvetrain, and a 205 hp ShiftCam inline-four engine.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('BMW R 1300 GS', 140, 20395.00, 'Benchmark adventure tourer featuring a redesigned 1300cc boxer engine, Telelever suspension, and advanced radar rider aids.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('BMW S 1000 RR', 188, 19895.00, 'High-performance superbike delivering 205 horsepower, dynamic traction control, and race-tuned electronics.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('BMW K 1600 GTL', 125, 29995.00, 'Luxury sport-touring motorcycle powered by a smooth 1649cc inline-six engine built for long-distance travel.');
+
+-- DUCATI MODELS
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Ducati Panigale V4 S', 186, 31995.00, 'Italian superbike equipped with a 1103cc Desmosedici Stradale V4 engine, Öhlins electronic suspension, and aerodynamic wings.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Ducati Multistrada V4 Rally', 155, 29995.00, 'Long-range adventure tourer featuring a 170 hp V4 Granturismo engine and adaptive cruise control technology.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Ducati Streetfighter V4 S', 170, 27595.00, 'Stripped-back naked superbike utilizing a 1103cc V4 engine, high handlebars, and a biplane wing configuration.');
+
+INSERT INTO Motorbikes (Model, Topspeed, Cost, Description)
+VALUES ('Ducati Diavel V4', 155, 26995.00, 'Muscular power cruiser combining a bold stance with the high-performance 1158cc V4 Granturismo powerplant.');
 INSERT INTO Motorbikes(Model,Topspeed,Cost,Description) VALUES("MT-03",108,5300,"Yamaha is legendary for Japanese reliability and sharp, intuitive handling. The R1's defining feature is its crossplane crankshaft inline-four engine, which mimics the power delivery and distinct firing order of a MotoGP bike, providing linear torque and excellent traction coming out of corners.")
+
+
+-- All Motorbikes
+  
+  SELECT * FROM Motorbikes;
+  -- All Motorbikes and Maker
+  SELECT Makers.Name,Motorbikes.Model FROM Motorbikes
+  JOIN Makers ON Makers.MakerID=Motorbikes.MakerID;
+
+  -- Motorbikes of one make
+  SELECT Motorbikes.Model FROM Motorbikes
+  JOIN Makers ON MakerID.MakerID=Motorbikes.MakerID
+  Where Makers.Name="Yamaha";
