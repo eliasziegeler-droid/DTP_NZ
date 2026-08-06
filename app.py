@@ -1,4 +1,4 @@
-from flask import Flask, g 
+from flask import Flask, g, render_template 
 import sqlite3 
 
 
@@ -23,16 +23,32 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+def query_db(query, args=(), one=False):
+    cur = get_db().execute(query, args)
+    rv = cur.fetchall()
+    cur.close()
+    return (rv[0] if rv else None) if one else rv
+
+
+# @app.route('/')
+# def home():
+#     #homepage
+#     db = get_db()
+#     cursor = db.cursor()
+#     sql = "SELECT * FROM Motorbikes;"
+#     cursor.execute(sql)
+#     results = cursor.fetchall()
+#     return str(results)
 
 @app.route('/')
 def home():
-    #homepage
-    db = get_db()
-    cursor = db.cursor()
-    sql = "SELECT * FROM Motorbikes;"
-    cursor.execute(sql)
-    results = cursor.fetchall()
-    return str(results)
+#home page- just the ID, Maker, Model amnd Image URL
+    sql= """ 
+            SELECT Motorbikes.BikeID, Motorbikes.MakerID, Motorbikes.Model, Motorbikes.Cost, Motorbikes.Description,Motorbikes.`Acceleration 0-100 km/h`, Motorbikes.Topspeed, Motorbikes.ImageURL
+            FROM Motorbikes 
+            JOIN Makers ON Makers.MakerID=MOTORBIKES.MakerID;"""
+    results = query_db(sql,(id,),True)
+    return render_template("layout.html")
 
 
 if __name__ == "__main__":
