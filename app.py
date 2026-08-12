@@ -5,8 +5,6 @@ import sqlite3
 DATABASE = 'database.db'
 
 
-
-
 #initialise app
 app = Flask(__name__)
 
@@ -44,11 +42,10 @@ def query_db(query, args=(), one=False):
 def home():
 #home page- just the ID, Maker, Model amnd Image URL
     sql= """ 
-            SELECT Motorbikes.BikeID, Motorbikes.MakerID, Motorbikes.Model, Motorbikes.Cost, Motorbikes.Description,Motorbikes.`Acceleration 0-100 km/h`, Motorbikes.Topspeed, Motorbikes.ImageURL
-            FROM Motorbikes 
-            JOIN Makers ON Makers.MakerID=MOTORBIKES.MakerID;"""
-    results = query_db(sql,(id,),True)
-    return render_template("layout.html")
+            SELECT Motorbikes.BikeID,Makers.Name,Motorbikes.Model, Motorbikes.ImageURL FROM Motorbikes
+JOIN Makers ON Makers.MakerID=Motorbikes.MakerID;"""
+    results = query_db(sql)
+    return render_template("home.html", bikes=results)
 
 
 if __name__ == "__main__":

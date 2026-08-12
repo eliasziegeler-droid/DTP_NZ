@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <div box="bike-container">
+        <h1 class="page-title">Fahrrad-Übersicht</h1>
+
+        <div class="bike-grid">
+            {% for bike in bikes %}
+            <div class="bike-card">
+                <div class="bike-card-header">
+                <span class="bike-brand">{{ bike[1] }}</span>
+                <h2 class="bike-model">{{ bike[2] }}</h2>
+                </div>
+                
+                <div class="bike-card-body">
+                <p class="bike-status">Verfügbar</p>
+                </div>
+
+                <div class="bike-card-footer">
+                <a href="#" class="btn-details">Details anzeigen</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+
+{% endblock %}
+
