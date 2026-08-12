@@ -8,3 +8,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
   gap: 20px;
   
 }
+
+.navcolor
+{
+  background-color: #ce0000;
+  padding: 5px;
+  text-align: center;
+}
+
+.w3-container
+{
+  background-color: #6e6e6e;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  margin: 100px;
+}
