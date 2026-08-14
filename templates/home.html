@@ -1,7 +1,17 @@
 {% extends "layout.html" %}
 {% block body %}
 
-        <div box="bike-container">
+<header class="aestethic header">
+       
+
+
+
+
+
+
+
+
+<div box="bike-container">
         <h1 class="page-title">Fahrrad-Übersicht</h1>
 
         <div class="bike-grid">
@@ -16,13 +26,19 @@
                 <p class="bike-status">Verfügbar</p>
                 </div>
 
-                <div class="bike-card-footer">
-                <a href="#" class="btn-details">Details anzeigen</a>
-                </div>
+            <div class="bike-card-footer">
+                <a href="#" class="dropdown-toggle">
+                    <img src="{{ bike[3] }}s" alt="Bike Image" class="bike-image">
+                        <dropdown-content>
+                            <p>Farbe: {{ bike[3] }}</p>
+                            <p>Preis: {{ bike[4] }} €</p>
+                            <p>Beschreibung: {{ bike[5] }}</p>
+                        </dropdown-content>
+                </a>
             </div>
             {% endfor %}
+            {% endblock %}
         </div>
         </div>
 
-{% endblock %}
 
