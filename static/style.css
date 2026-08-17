@@ -16,10 +16,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
   text-align: center;
 }
 
-.w3-container
+.bodylayout
 {
   background-color: #6e6e6e;
   color: rgb(0, 0, 0);
   padding: 20px;
   margin: 100px;
+}
+
+.layout-grid 
+{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 50% 50%;
 }
