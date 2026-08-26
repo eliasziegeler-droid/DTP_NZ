@@ -4,23 +4,22 @@
 <header class="aestethic header">
        
 
-<div box="bike-container">
+<div class="bike-container">
     <div class="bike-grid">
             {% for bike in bikes %}
-            <div class="bike-card">
-                
+            <div class="bike-card"> 
                 <h2 class="bike-model">{{ bike[2] }}</h2>
-
+                    
                     <div class="bike-card-content">
                         <a href="#" class="dropdown-toggle">
                             <img src="{{ bike[3] }}s" alt="Bike Image" class="bike-image">
-
-                                <div  class= "dropdown-content">
-                                    <p>Farbe: {{ bike[3] }}</p>
-                                    <p>Preis: {{ bike[4] }} €</p>
-                                    <p>Beschreibung: {{ bike[5] }}</p>
-                                </div>                                                                                                                                                                                                            
                         </a>
+                                <div  class= "dropdown-content">
+                                    
+                                        <p>Farbe: {{ bike[3] }}</p>
+                                        <p>Preis: {{ bike[4] }} €</p>
+                                        <p>Beschreibung: {{ bike[5] }}</p>
+                                </div>                                                                                                                                                                                                            
                     </div>                                 
             </div>
             {% endfor %}

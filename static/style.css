@@ -8,6 +8,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
 }
 
 
+.ELIAS
+{
+  text-align: center;
+  text-shadow: #6e6e6e;
+  margin-bottom: 30px;
+}
+
+
+.navcolor
+{
+  background-color: #ce0000;
+  padding: 2px;
+  text-align: center;
+  margin-bottom: 50px;
+}
 
 
 .bike-grid
@@ -19,40 +34,43 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
   
 }
 
+
 .bike-card
 {
-border-color: rgb(0, 0, 0);
+border-color: rgb(99, 0, 0);
 border-width: 5px;
 border-style: groove;
-
-
+position: relative;
 }
+
 
 .bike-model
 {
 text-align: center;
 }
 
+
 .bike-card-content
 {
 text-align: center;
+margin: 10px;
 }
+
 
 .dropdown-content
 {
-cursor: pointer;
-}
-.navcolor
-{
-  background-color: #ce0000;
-  padding: 2px;
-  text-align: center;
+  display: none; 
+  min-width: 500px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.13);
+  opacity: 0;
+  z-index: 1;
 }
 
-.ELIAS
+.bike-card:hover .dropdown-content
 {
-  text-align: center;
-  text-shadow: #6e6e6e;
+display: block;
+opacity: 1;
 }
 
 .bodylayout
@@ -61,6 +79,7 @@ cursor: pointer;
   color: rgb(0, 0, 0);
   margin: 100px;
 }
+
 
 .layout-grid 
 {
