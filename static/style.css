@@ -1,32 +1,70 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
 
 
-.bike-grid
+.bike-container
 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  padding: 30px;
   
 }
 
+
+
+
+.bike-grid
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  
+  
+}
+
+.bike-card
+{
+border-color: rgb(0, 0, 0);
+border-width: 5px;
+border-style: groove;
+
+
+}
+
+.bike-model
+{
+text-align: center;
+}
+
+.bike-card-content
+{
+text-align: center;
+}
+
+.dropdown-content
+{
+cursor: pointer;
+}
 .navcolor
 {
   background-color: #ce0000;
-  padding: 5px;
+  padding: 2px;
   text-align: center;
+}
+
+.ELIAS
+{
+  text-align: center;
+  text-shadow: #6e6e6e;
 }
 
 .bodylayout
 {
   background-color: #6e6e6e;
   color: rgb(0, 0, 0);
-  padding: 20px;
   margin: 100px;
 }
 
 .layout-grid 
 {
   display: grid;
-  gap: 20px;
-  grid-template-columns: 50% 50%;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }

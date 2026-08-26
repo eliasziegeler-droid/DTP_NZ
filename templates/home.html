@@ -4,41 +4,29 @@
 <header class="aestethic header">
        
 
-
-
-
-
-
-
-
 <div box="bike-container">
-        <h1 class="page-title">Fahrrad-Übersicht</h1>
-
-        <div class="bike-grid">
+    <div class="bike-grid">
             {% for bike in bikes %}
             <div class="bike-card">
-                <div class="bike-card-header">
-                <span class="bike-brand">{{ bike[1] }}</span>
-                <h2 class="bike-model">{{ bike[2] }}</h2>
-                </div>
                 
-                <div class="bike-card-body">
-                <p class="bike-status">Verfügbar</p>
-                </div>
+                <h2 class="bike-model">{{ bike[2] }}</h2>
 
-            <div class="bike-card-footer">
-                <a href="#" class="dropdown-toggle">
-                    <img src="{{ bike[3] }}s" alt="Bike Image" class="bike-image">
-                        <dropdown-content>
-                            <p>Farbe: {{ bike[3] }}</p>
-                            <p>Preis: {{ bike[4] }} €</p>
-                            <p>Beschreibung: {{ bike[5] }}</p>
-                        </dropdown-content>
-                </a>
+                    <div class="bike-card-content">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="{{ bike[3] }}s" alt="Bike Image" class="bike-image">
+
+                                <div  class= "dropdown-content">
+                                    <p>Farbe: {{ bike[3] }}</p>
+                                    <p>Preis: {{ bike[4] }} €</p>
+                                    <p>Beschreibung: {{ bike[5] }}</p>
+                                </div>                                                                                                                                                                                                            
+                        </a>
+                    </div>                                 
             </div>
             {% endfor %}
-            {% endblock %}
-        </div>
-        </div>
+    </div>
+</div>
 
 
+  {% endblock %}
+                                           
