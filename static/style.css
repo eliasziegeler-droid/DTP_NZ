@@ -37,8 +37,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
 
 .bike-card
 {
-border-color: rgb(99, 0, 0);
 border-width: 5px;
+border-color: #FD1C03;
 border-style: groove;
 position: relative;
 }
@@ -53,24 +53,36 @@ text-align: center;
 .bike-card-content
 {
 text-align: center;
-margin: 10px;
+margin: 30px;
+}
+
+.img-border
+{
+border-color: rgba(0, 0, 0, 0.555);
+border-width: 5px;
+position: relative;  
 }
 
 
 .dropdown-content
 {
   display: none; 
-  min-width: 500px;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.13);
+  margin-top: 20px;
+  background-color: #6e6e6e;
+  border-color: #000000b0;
+  border-width: 5px;
+  border-style: groove;
+  position: relative;
   opacity: 0;
-  z-index: 1;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 .bike-card:hover .dropdown-content
 {
 display: block;
 opacity: 1;
+visibility: visible;
 }
 
 .bodylayout
