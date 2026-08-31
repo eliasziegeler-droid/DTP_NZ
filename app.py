@@ -40,9 +40,9 @@ def query_db(query, args=(), one=False):
 
 @app.route('/')
 def home():
-#home page- just the ID, Maker, Model amnd Image URL
+
     sql= """ 
-            SELECT Motorbikes.BikeID,Makers.Name,Motorbikes.Model, Motorbikes.ImageURL FROM Motorbikes
+            SELECT Motorbikes.BikeID,Makers.Name,Motorbikes.Model, Motorbikes.Topspeed, Motorbikes.Cost, Motorbikes.description, Motorbikes.ImageURL FROM Motorbikes
 JOIN Makers ON Makers.MakerID=Motorbikes.MakerID;"""
     results = query_db(sql)
     return render_template("home.html", bikes=results)
