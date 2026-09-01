@@ -10,9 +10,10 @@ app = Flask(__name__)
 
 
 def get_db():
-    db = getattr(g,'_database', None)
+    db = getattr(g, '_database', None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
+        db.row_factory = sqlite3.Row
     return db
 
 @app.teardown_appcontext
@@ -40,10 +41,9 @@ def query_db(query, args=(), one=False):
 
 @app.route('/')
 def home():
-
-    sql= """ 
-            SELECT Motorbikes.BikeID,Makers.Name,Motorbikes.Model, Motorbikes.Topspeed, Motorbikes.Cost, Motorbikes.description, Motorbikes.ImageURL FROM Motorbikes
-JOIN Makers ON Makers.MakerID=Motorbikes.MakerID;"""
+    sql= """
+        SELECT Motorbikes.BikeID, Makers.Name, Motorbikes.Model, Motorbikes.Acceleration, Motorbikes.Topspeed, Motorbikes.Cost, Motorbikes.description, Motorbikes.ImageURL FROM Motorbikes
+        JOIN Makers ON Makers.MakerID=Motorbikes.MakerID;"""
     results = query_db(sql)
     return render_template("home.html", bikes=results)
 

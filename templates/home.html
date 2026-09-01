@@ -13,14 +13,14 @@
                     <div class="bike-card-content">
                         <div class="img">
                             <a href="#">  
-                                <img src="{{ bike[6] }}" alt="Bike Image" class="bike-image">
+                                <img src="{{ bike['ImageURL'] }}" alt="Bike Image" class="bike-image">
                             </a>
                         </div>        
                             <div  class= "dropdown-content">
-                                    
-                                    <p>Topspeed: {{ bike[3] }} km/h </p>
-                                    <p>Preis: {{ bike[4] }} € </p>
-                                    <p>{{ bike[5] }}</p>
+                                    <p>Acceleration  (0-100 km/h): {{bike['Acceleration'] }}</p>
+                                    <p>Topspeed: {{ bike['Topspeed'] }} km/h </p>
+                                    <p>Preis: {{ bike['Cost'] }} € </p>
+                                    <p>{{ bike['Description'] }}</p>
                             </div>                                                                                                                                                                                                            
                     </div>                                 
             </div>
