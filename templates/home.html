@@ -11,15 +11,17 @@
                 <h2 class="bike-model">{{ bike[2] }}</h2>
                     
                     <div class="bike-card-content">
-                        <a href="#">
-                            <div class="img-border"><img src="{{ bike[6] }}s" alt="Bike Image" class="bike-image"></div>
-                        </a>
-                                <div  class= "dropdown-content">
+                        <div class="img">
+                            <a href="#">  
+                                <img src="{{ bike[6] }}" alt="Bike Image" class="bike-image">
+                            </a>
+                        </div>        
+                            <div  class= "dropdown-content">
                                     
-                                        <p>Topspeed: {{ bike[3] }} km/h </p>
-                                        <p>Preis: {{ bike[4] }} € </p>
-                                        <p>{{ bike[5] }}</p>
-                                </div>                                                                                                                                                                                                            
+                                    <p>Topspeed: {{ bike[3] }} km/h </p>
+                                    <p>Preis: {{ bike[4] }} € </p>
+                                    <p>{{ bike[5] }}</p>
+                            </div>                                                                                                                                                                                                            
                     </div>                                 
             </div>
             {% endfor %}

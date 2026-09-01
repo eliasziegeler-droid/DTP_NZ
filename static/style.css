@@ -32,6 +32,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
   gap: 30px;
   
   
+  
 }
 
 
@@ -53,16 +54,21 @@ text-align: center;
 .bike-card-content
 {
 text-align: center;
-margin: 30px;
+margin: 2px;
 }
 
-.img-border
+.img
 {
-border-color: rgba(0, 0, 0, 0.555);
-border-width: 5px;
-position: relative;  
+padding: 20%
+
 }
 
+.img img, .bike-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-position: center;
+}
 
 .dropdown-content
 {
@@ -89,7 +95,7 @@ visibility: visible;
 {
   background-color: #6e6e6e;
   color: rgb(0, 0, 0);
-  margin: 100px;
+  margin: 45px;
 }
 
 
