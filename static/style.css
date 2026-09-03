@@ -18,7 +18,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
 
 .navcolor
 {
-  background-color: #ce0000;
+  background-color: #ff4209;
   padding: 2px;
   text-align: center;
   margin-bottom: 50px;
@@ -38,9 +38,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
 
 .bike-card
 {
-border-width: 5px;
-border-color: #FD1C03;
-border-style: groove;
+border-width: 10px;
+border-color: #ff4209;
+border-style: solid;
 position: relative;
 }
 
@@ -59,7 +59,7 @@ margin: 2px;
 
 .img
 {
-padding: 20%
+padding: 10%
 
 }
 
@@ -73,13 +73,9 @@ padding: 20%
 .dropdown-content
 {
   display: none; 
-  position: absolute;
-  margin-top: 20px;
-  background-color: #6e6e6e;
-  border-color: #000000b0;
+  border-color: #000000;
   border-width: 5px;
-  border-style: groove;
-  position: relative;
+  border-style: double;
   opacity: 0;
   transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.4s ease-in-out;
 }
@@ -89,6 +85,32 @@ padding: 20%
 display: block;
 opacity: 1;
 visibility: visible;
+}
+
+.dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.dropdown-content:hover .dropdown {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in; */
+}
+
+.dropdown-content {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.bike-card:hover .dropdown-content {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
 }
 
 .bodylayout
