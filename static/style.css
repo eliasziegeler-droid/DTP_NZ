@@ -12,7 +12,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
 {
   text-align: center;
   text-shadow: #6e6e6e;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
+  padding: 5%;
 }
 
 
@@ -57,17 +58,21 @@ text-align: center;
 margin: 2px;
 }
 
-.img
-{
-padding: 10%
 
+.img 
+{
+  padding: 10%;
 }
+
 
 .img img, .bike-image {
   width: 100%;
   height: 100%;
   display: block;
   object-position: center;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .dropdown-content
