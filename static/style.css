@@ -23,6 +23,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Righteous, sans-serif;}
   padding: 2px;
   text-align: center;
   margin-bottom: 50px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -43,6 +46,7 @@ border-width: 10px;
 border-color: #ff4209;
 border-style: solid;
 position: relative;
+border-radius: 16px;
 }
 
 
@@ -62,6 +66,7 @@ margin: 2px;
 .img 
 {
   padding: 10%;
+  margin-bottom: 0px;
 }
 
 
@@ -72,51 +77,37 @@ margin: 2px;
   object-position: center;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
-.dropdown-content
-{
-  display: none; 
-  border-color: #000000;
-  border-width: 5px;
-  border-style: double;
-  opacity: 0;
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.4s ease-in-out;
-}
 
-.bike-card:hover .dropdown-content
-{
-display: block;
-opacity: 1;
-visibility: visible;
-}
-
-.dropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
-
-.dropdown-content:hover .dropdown {
-  max-height: 500px;
-  transition: max-height 0.5s ease-in; */
-}
-
+/* 1. Das Dropdown im versteckten Zustand */
 .dropdown-content {
+  /* Animation & Verstecken */
+  display: block; 
   max-height: 0;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+  /* Deine Ränder & Styling (Behalten!) */
+  border-color: lch(0% 0 0);
+  border-width: 0.1px; 
+  border-style: solid;
+  border-radius: 16px;
+
+  /* Deine exakten Abstände (Behalten!) */
+  margin: 0px 85px 85px 85px; 
 }
 
+/* 2. Das Dropdown im Hover-Zustand */
 .bike-card:hover .dropdown-content {
-  max-height: 500px;
+  max-height: 800px; 
   opacity: 1;
   visibility: visible;
-  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
 }
+
 
 .bodylayout
 {
