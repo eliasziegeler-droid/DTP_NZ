@@ -2,3 +2,5 @@
 
 SELECT * FROM Motorbikes
 ORDER BY `MakerID` ASC;
+SELECT Motorbikes.BikeID, Makers.Name, Motorbikes.Model, Motorbikes.Acceleration, Motorbikes.Topspeed, Motorbikes.Cost, Motorbikes.description, Motorbikes.ImageURL FROM Motorbikes
+        JOIN Makers ON Makers.MakerID=Motorbikes.MakerID;
