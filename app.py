@@ -42,11 +42,12 @@ def query_db(query, args=(), one=False):
 @app.route('/')
 def home():
     sql= """
-        SELECT Motorbikes.BikeID, Makers.Name, Motorbikes.Model, Motorbikes.Acceleration, Motorbikes.Topspeed, Motorbikes.Cost, Motorbikes.description, Motorbikes.ImageURL, Makers.Cool_Order FROM Motorbikes
+        SELECT Motorbikes.BikeID, Makers.Name, Motorbikes.Model, Motorbikes.Acceleration, Motorbikes.Topspeed, Motorbikes.Cost, Motorbikes.description, Motorbikes.ImageURL, Motorbikes.WebURL, Makers.Cool_Order FROM Motorbikes
         JOIN Makers ON Makers.MakerID=Motorbikes.MakerID ORDER BY Makers.Cool_Order DESC; """
 
 
     results = query_db(sql)
+    print(results)
     return render_template("home.html", bikes=results)
 
 

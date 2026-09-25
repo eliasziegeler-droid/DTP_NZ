@@ -1,0 +1,8 @@
+-- database: ./database.db
+
+SELECT * FROM Motorbikes
+ORDER BY `MakerID` ASC;
+SELECT Motorbikes.BikeID, Makers.Name, Makers.Cool_Order, Motorbikes.Model, Motorbikes.Acceleration, Motorbikes.Topspeed, Motorbikes.Cost, Motorbikes.description, Motorbikes.ImageURL FROM Motorbikes
+        JOIN Makers ON Makers.MakerID=Motorbikes.MakerID ORDER BY Makers.Cool_Order;
+
+

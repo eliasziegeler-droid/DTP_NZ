@@ -12,10 +12,11 @@
                     
                     <div class="bike-card-content">
                         <div class="img">
-                            <a href="#">  
+                            <a href="{{ bike['WebURL'] }}" target="_blank">  
                                 <img src="{{ bike['ImageURL'] }}" alt="Bike Image" class="bike-image">
                             </a>
-                        </div>        
+                        </div>           
+                            
                             <div  class= "dropdown-content">
                                     <p>Acceleration  (0-100 km/h): {{bike['Acceleration'] }}</p>
                                     <p>Topspeed: {{ bike['Topspeed'] }} km/h </p>
